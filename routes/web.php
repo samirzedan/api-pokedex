@@ -15,8 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/pokemon', function () {
-    return view('pokemon.create');
+    return view('pokemon.index');
 });
 
-Route::get('/pokemon', [PokemonsController::class, 'index'])->name('pokemon.index');
-Route::post('/pokemon', [PokemonsController::class, 'store'])->name('pokemon.store');
+Route::resource('pokemon', PokemonsController::class)->except(['show']);
+
+// Route::get('/pokemon', [PokemonsController::class, 'index'])->name('pokemon.index');
+// Route::post('/pokemon', [PokemonsController::class, 'store'])->name('pokemon.store');
+Route::get('/pokemon/create', [PokemonsController::class, 'create'])->name('pokemon.create');

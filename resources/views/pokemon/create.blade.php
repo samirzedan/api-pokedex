@@ -55,5 +55,6 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Adicionar</button>
+        <a href="{{ route('pokemon.index') }}" class="btn btn-secondary">Cancelar</a>
     </form>
 </x-layout>

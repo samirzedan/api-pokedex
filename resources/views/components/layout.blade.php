@@ -12,6 +12,12 @@
 <div class="container">
     <div class="container" style="mt-3">
 
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ route('pokemon.index') }}">Home</a>
+            </div>
+        </nav>
+
         <h1>{{ $title }}</h1>
         {{ $slot }}
     </div>
