@@ -21,6 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/pokemon', [PokemonsController::class, 'index']);
-Route::post('/pokemon', [PokemonsController::class, 'store']);
 Route::get('/pokemon/{name}', [PokemonsController::class, 'index']);
 Route::get('/type', [TypesController::class, 'index']);

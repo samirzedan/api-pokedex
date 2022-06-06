@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PokemonsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,3 +13,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/pokemon', function () {
+    return view('pokemon.create');
+});
+
+Route::get('/pokemon', [PokemonsController::class, 'index'])->name('pokemon.index');
+Route::post('/pokemon', [PokemonsController::class, 'store'])->name('pokemon.store');

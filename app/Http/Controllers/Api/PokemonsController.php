@@ -15,12 +15,7 @@ class PokemonsController extends Controller
             $query->where('name', $request->name);
         }
 
-        //return $query->paginate(3);
+        // return $query->paginate(3);
         return $query->get();
     }
-
-    public function store(Request $request) {
-        return response()->json(Pokemon::create($request->all()), 201);
-    }
-
 }
