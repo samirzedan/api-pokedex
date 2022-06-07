@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class PokemonsController extends Controller
 {
     public function index(Request $request) {
-        $query = Pokemon::with('types:id,name');
+        $query = Pokemon::with('types:id,name,color_hex_t,color_hex_b');
 
         if($request->name !== null) {
             $query->where('name', $request->name);

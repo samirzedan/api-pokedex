@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class PokemonsController extends Controller
 {
     public function index() {
-        $pokemons = Pokemon::with('types:id,name')->get();
+        $pokemons = Pokemon::with('types:id,name,color_hex_t,color_hex_b')->get();
         return view('pokemon.index')->with('pokemons', $pokemons);
     }
 

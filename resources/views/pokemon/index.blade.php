@@ -7,7 +7,7 @@
                 {{ $pokemon->name }}
                 <div class="ms-2">
                     @foreach ($pokemon->types as $type)
-                    <x-type type="{{ $type->name }}"/>
+                    <x-type type="{{ $type->name }}" colorT="{{ $type->color_hex_t }}" colorB="{{ $type->color_hex_b }}" />
                     @endforeach
                 </div>
             </div>
