@@ -4,6 +4,9 @@
         @foreach ($pokemons as $pokemon)
         <li class="list-group-item d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center">
+                <div class="me-2 fs-6">
+                    <span class="badge bg-secondary">N° {{ $pokemon->numero }}</span>
+                </div>
                 {{ $pokemon->name }}
                 <div class="ms-2">
                     @foreach ($pokemon->types as $type)

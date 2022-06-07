@@ -2,7 +2,11 @@
     <form action="{{ route('pokemon.store') }}" method="post">
         @csrf
         <div class="row mb-3">
-            <div class="col-12">
+            <div class="col-2">
+                <label for="numero" class="form-label">Número</label>
+                <input type="number" autofocus id="numero" name="numero" class="form-control">
+            </div>
+            <div class="col-10">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" autofocus id="name" name="name" class="form-control">
             </div>
