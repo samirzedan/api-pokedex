@@ -5,7 +5,7 @@
         <div class="row mb-3">
             <div class="col-2">
                 <label for="numero" class="form-label">Número</label>
-                <input type="number" autofocus id="numero" name="numero" class="form-control" value="{{ $pokemon->numero }}">
+                <input type="number" id="numero" name="numero" class="form-control" value="{{ $pokemon->numero }}">
             </div>
             <div class="col-10">
                 <label for="name" class="form-label">Name</label>
@@ -15,27 +15,27 @@
         <div class="row mb-3">
             <div class="col-2">
                 <label for="hp" class="form-label">HP</label>
-                <input type="number" autofocus id="hp" name="hp" class="form-control" value="{{ $pokemon->hp }}">
+                <input type="number" id="hp" name="hp" class="form-control" value="{{ $pokemon->hp }}">
             </div>
             <div class="col-2">
                 <label for="attack" class="form-label">Attack</label>
-                <input type="number" autofocus id="attack" name="attack" class="form-control" value="{{ $pokemon->attack }}">
+                <input type="number" id="attack" name="attack" class="form-control" value="{{ $pokemon->attack }}">
             </div>
             <div class="col-2">
                 <label for="defense" class="form-label">Defense</label>
-                <input type="number" autofocus id="defense" name="defense" class="form-control" value="{{ $pokemon->defense }}">
+                <input type="number" id="defense" name="defense" class="form-control" value="{{ $pokemon->defense }}">
             </div>
             <div class="col-2">
                 <label for="special_attack" class="form-label">Special Attack</label>
-                <input type="number" autofocus id="special_attack" name="special_attack" class="form-control" value="{{ $pokemon->special_attack }}">
+                <input type="number" id="special_attack" name="special_attack" class="form-control" value="{{ $pokemon->special_attack }}">
             </div>
             <div class="col-2">
                 <label for="special_defense" class="form-label">Special Defense</label>
-                <input type="number" autofocus id="special_defense" name="special_defense" class="form-control" value="{{ $pokemon->special_defense }}">
+                <input type="number" id="special_defense" name="special_defense" class="form-control" value="{{ $pokemon->special_defense }}">
             </div>
             <div class="col-2">
                 <label for="speed" class="form-label">Speed</label>
-                <input type="number" autofocus id="speed" name="speed" class="form-control" value="{{ $pokemon->speed }}">
+                <input type="number" id="speed" name="speed" class="form-control" value="{{ $pokemon->speed }}">
             </div>
         </div>
         <div class="row mb-3" class="form-label">
