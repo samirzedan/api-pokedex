@@ -2,7 +2,7 @@
     <a href="{{ route('pokemon.create') }}" class="btn btn-primary">Adicionar</a>
     <ul class="list-group">
         @foreach ($pokemons as $pokemon)
-        <li class="list-group-item d-flex justify-content-between align-items-center border border-secondary">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center">
                 {{ $pokemon->name }}
             </div>
