@@ -9,13 +9,17 @@ use Illuminate\Http\Request;
 class PokemonsController extends Controller
 {
     public function index() {
-        $pokemons = Pokemon::with('types:id,name,color_hex_t,color_hex_b')->get();
+        $pokemons = Pokemon::with('types:id,name,color_hex_t,color_hex_b')->orderBy('numero', 'asc')->get();
         return view('pokemon.index')->with('pokemons', $pokemons);
     }
 
     public function create() {
         $types = Type::all();
-        return view('pokemon.create')->with('types', $types);
+        $nextPokemonNumber = Pokemon::max('numero') + 1;
+
+        return view('pokemon.create')
+            ->with('types', $types)
+            ->with('proximoNumero', $nextPokemonNumber);
     }
 
     public function store(Request $request) {

@@ -4,7 +4,7 @@
         <div class="row mb-3">
             <div class="col-2">
                 <label for="numero" class="form-label">Número</label>
-                <input type="number" id="numero" name="numero" class="form-control">
+                <input type="number" id="numero" name="numero" class="form-control" value="{{ $proximoNumero }}">
             </div>
             <div class="col-10">
                 <label for="name" class="form-label">Name</label>
