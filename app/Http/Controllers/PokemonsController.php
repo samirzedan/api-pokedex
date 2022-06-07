@@ -3,14 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pokemon;
-use App\Models\PokemonType;
 use App\Models\Type;
 use Illuminate\Http\Request;
 
 class PokemonsController extends Controller
 {
     public function index() {
-        $pokemons = Pokemon::all();
+        $pokemons = Pokemon::with('types:id,name')->get();
         return view('pokemon.index')->with('pokemons', $pokemons);
     }
 
@@ -24,11 +23,18 @@ class PokemonsController extends Controller
         $request->type_2
         ? $pokemon->types()->sync([$request->type_1, $request->type_2])
         : $pokemon->types()->sync([$request->type_1]);
-        // PokemonType::insert([
-        //     ['pokemon_id' => $pokemon->id, 'type_id' => $request->type_1],
-        //     [$pokemon->id, $request->type_2]
-        // ]);
         return redirect(route('pokemon.index'));
+    }
+
+    public function edit(Pokemon $pokemon) {
+        $types = Type::all();
+        return view('pokemon.edit')
+            ->with('types', $types)
+            ->with('pokemon', $pokemon);
+    }
+
+    public function update(Pokemon $pokemon, Request $request) {
+        dd($request);
     }
 
 }

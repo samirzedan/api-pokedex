@@ -29,4 +29,13 @@ class Pokemon extends Model
         return $this->hasMany(PokemonType::class);
     }
 
+    /**
+     * Verifica se existe o index $i no array de tipos
+     */
+    public function verifyType(int $i): bool {
+        return $this->types->count() > $i
+        ? true
+        : false;
+    }
+
 }

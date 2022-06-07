@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/pokemon', function () {
-    return view('pokemon.index');
+Route::get('/', function () {
+    return redirect()->route('pokemon.index');
 });
 
 Route::resource('pokemon', PokemonsController::class)->except(['show']);

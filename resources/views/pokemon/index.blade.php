@@ -5,13 +5,18 @@
         <li class="list-group-item d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center">
                 {{ $pokemon->name }}
+                <div class="ms-2">
+                    @foreach ($pokemon->types as $type)
+                    <x-type type="{{ $type->name }}"/>
+                    @endforeach
+                </div>
             </div>
             <span class="d-flex">
-                <form action="{{ route('pokemon.destroy', $pokemon->id) }}" class="ms-3" method="POST">
+                <form action="{{ route('pokemon.edit', $pokemon) }}" class="ms-3" method="GET">
                     @csrf
-                    <a href="{{ route('pokemon.edit', $pokemon->id) }}" class="btn btn-primary btn-sm" style="margin-left: 15px;">
+                    <button class="btn btn-primary btn-sm" style="margin-left: 15px;">
                         <i class="fa-solid fa-pen-to-square"></i>
-                    </a>
+                    </button>
                 </form>
             </span>
         </li>
