@@ -44,7 +44,7 @@
                 <select name="type_1" id="type_1" class="form-select" value="{{ $pokemon->type_1 }}">
                     <option value="0"></option>
                     @foreach ($types as $type)
-                    <option value="{{ $type->id }}" @if ($pokemon->types[0]->id == $type->id) selected @endif >
+                    <option value="{{ $type->id }}" @if ($pokemon->verifyType(0) && $pokemon->types[0]->id == $type->id) selected @endif >
                         {{ $type->name }}
                     </option>
                     @endforeach
