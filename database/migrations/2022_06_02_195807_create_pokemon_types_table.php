@@ -19,7 +19,6 @@ class CreatePokemonTypesTable extends Migration
             $table->foreign('pokemon_id')->references('id')->on('pokemons');
             $table->unsignedBigInteger('type_id');
             $table->foreign('type_id')->references('id')->on('types');
-            $table->timestamps();
         });
     }
 

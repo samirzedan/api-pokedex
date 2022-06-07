@@ -15,6 +15,7 @@ class CreatePokemonsTable extends Migration
     {
         Schema::create('pokemons', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('numero')->after('id');
             $table->string('name');
             $table->unsignedTinyInteger('hp');
             $table->unsignedTinyInteger('attack');
