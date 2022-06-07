@@ -14,7 +14,7 @@ class PokemonsController extends Controller
         if($request->name !== null) {
             $query->where('name', $request->name);
         }
-        // return $query->paginate(3);
-        return $query->get();
+        return $query->paginate(8);
+        //return $query->get();
     }
 }
