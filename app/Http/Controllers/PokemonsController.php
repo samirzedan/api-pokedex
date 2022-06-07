@@ -40,6 +40,9 @@ class PokemonsController extends Controller
     public function update(Pokemon $pokemon, Request $request) {
         $pokemon->fill($request->all());
         $pokemon->save();
+        $request->type_2
+        ? $pokemon->types()->sync([$request->type_1, $request->type_2])
+        : $pokemon->types()->sync([$request->type_1]);
 
         return redirect()->route('pokemon.index');
     }

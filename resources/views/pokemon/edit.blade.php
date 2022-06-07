@@ -38,7 +38,6 @@
                 <input type="number" id="speed" name="speed" class="form-control" value="{{ $pokemon->speed }}">
             </div>
         </div>
-        <!--
         <div class="row mb-3" class="form-label">
             <div class="col-2">
                 <label for="type_1" class="form-label">Type 1</label>
@@ -63,7 +62,6 @@
                 </select>
             </div>
         </div>
-        -->
 
         <button type="submit" class="btn btn-primary">Salvar</button>
         <a href="{{ route('pokemon.index') }}" class="btn btn-secondary">Cancelar</a>
