@@ -1,8 +1,13 @@
 <x-layout title="Editar {{ $pokemon->name }}">
     <form action="{{ route('pokemon.update', $pokemon->id) }}" method="post">
         @csrf
+        @method('PUT')
         <div class="row mb-3">
-            <div class="col-12">
+            <div class="col-2">
+                <label for="numero" class="form-label">Número</label>
+                <input type="number" autofocus id="numero" name="numero" class="form-control" value="{{ $pokemon->numero }}">
+            </div>
+            <div class="col-10">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" autofocus id="name" name="name" class="form-control" value="{{ $pokemon->name }}">
             </div>
@@ -58,7 +63,7 @@
             </div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Adicionar</button>
+        <button type="submit" class="btn btn-primary">Salvar</button>
         <a href="{{ route('pokemon.index') }}" class="btn btn-secondary">Cancelar</a>
     </form>
 </x-layout>

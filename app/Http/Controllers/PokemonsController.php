@@ -34,7 +34,10 @@ class PokemonsController extends Controller
     }
 
     public function update(Pokemon $pokemon, Request $request) {
-        dd($request);
+        $pokemon->fill($request->all());
+        $pokemon->save();
+
+        return redirect()->route('pokemon.index');
     }
 
 }
