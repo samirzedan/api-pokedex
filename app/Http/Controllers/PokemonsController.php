@@ -8,8 +8,10 @@ use Illuminate\Http\Request;
 
 class PokemonsController extends Controller
 {
-    public function index() {
-        $pokemons = Pokemon::with('types:id,name,color_hex_t,color_hex_b')->orderBy('numero', 'asc')->get();
+    public function index(Request $request) {
+        //$pokemons = Pokemon::with('types:id,name,color_hex_t,color_hex_b')->orderBy('numero', 'asc')->get();
+        $query = Pokemon::with('types:id,name,color_hex_t,color_hex_b');
+        $pokemons = $query->paginate(10);
         return view('pokemon.index')->with('pokemons', $pokemons);
     }
 
