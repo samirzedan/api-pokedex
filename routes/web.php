@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::resource('pokemon', PokemonsController::class)->except(['show', 'destroy']);
+
+Route::get('/pokemon/{num}', [PokemonsController::class, 'getPokemon'])->name('pokemon.card');

@@ -39,4 +39,21 @@ class Pokemon extends Model
         : false;
     }
 
+    public function getImage(int $i, int $numeroPokemon):string {
+        switch ($i) {
+            case 1:
+                return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/$numeroPokemon.png";
+                break;
+            case 2:
+                return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/$numeroPokemon.gif";
+                break;
+            case 3:
+                return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/$numeroPokemon.png";
+                break;
+            default:
+                return null;
+                break;
+        }
+    }
+
 }
