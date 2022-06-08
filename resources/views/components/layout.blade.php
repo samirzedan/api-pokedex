@@ -9,18 +9,18 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-<div class="container">
-    <div class="container" style="mt-3">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="{{ route('pokemon.index') }}">Home</a>
+        </div>
+    </nav>
+    <div class="container">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="{{ route('pokemon.index') }}">Home</a>
-            </div>
-        </nav>
+        <div class="container" style="mt-3">
 
-        <h1>{{ $title }}</h1>
-        {{ $slot }}
+            <h1>{{ $title }}</h1>
+            {{ $slot }}
+        </div>
     </div>
-</div>
 </body>
 </html>

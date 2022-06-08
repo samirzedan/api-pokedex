@@ -45,7 +45,7 @@
         @endforeach
     </ul>
     <!-- Navegação Entre Páginas -->
-    <div class="row justify-content-md-center">
+    <div class="row justify-content-md-center mt-3">
         <div class="col-auto">
           {{ $pokemons->links() }}
         </div>
