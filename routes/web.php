@@ -18,8 +18,4 @@ Route::get('/', function () {
     return redirect()->route('pokemon.index');
 });
 
-Route::resource('pokemon', PokemonsController::class)->except(['show']);
-
-// Route::get('/pokemon', [PokemonsController::class, 'index'])->name('pokemon.index');
-// Route::post('/pokemon', [PokemonsController::class, 'store'])->name('pokemon.store');
-Route::get('/pokemon/create', [PokemonsController::class, 'create'])->name('pokemon.create');
+Route::resource('pokemon', PokemonsController::class)->except(['show', 'destroy']);
