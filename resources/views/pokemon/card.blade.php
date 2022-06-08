@@ -13,5 +13,4 @@
         alt="{{ $pokemon->name }}"
         class="w-25"
     >
-
 </x-layout>
