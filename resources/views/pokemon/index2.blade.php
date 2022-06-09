@@ -30,7 +30,8 @@
                 <x-type type="{{ $type->name }}" colorT="{{ $type->color_hex_t }}" colorB="{{ $type->color_hex_b }}" />
                 @endforeach
             </p>
-            <a href="{{ route('pokemon.card', $pokemon->numero) }}" class="btn btn-primary">Ver mais</a>
+            <a href="{{ route('pokemon.edit', $pokemon) }}" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+            <a href="{{ route('pokemon.card', $pokemon->numero) }}" class="btn btn-primary btn-sm">Ver mais</a>
             </div>
         </div>
         @endforeach
