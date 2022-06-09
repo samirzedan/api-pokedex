@@ -10,8 +10,8 @@ class PokemonsController extends Controller
 {
     public function index(Request $request) {
         $query = Pokemon::with('types:id,name,color_hex_t,color_hex_b')->orderBy('numero', 'asc');
-        $pokemons = $query->paginate(5);
-        return view('pokemon.index')->with('pokemons', $pokemons);
+        $pokemons = $query->paginate(12);
+        return view('pokemon.index2')->with('pokemons', $pokemons);
     }
 
     public function getPokemon($num) {

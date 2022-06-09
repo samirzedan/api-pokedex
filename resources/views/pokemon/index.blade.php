@@ -11,7 +11,7 @@
         </div>
     </form>-->
     <!-- Botão "Adicionar" -->
-    <a href="{{ route('pokemon.create') }}" class="btn btn-primary mb-3" title="Adicionar">Adicionar</a>
+    <a href="{{ route('pokemon.create') }}" class="btn btn-primary mt-2 mb-3" title="Adicionar">Adicionar</a>
     <!-- Navegação Entre Páginas -->
     <div class="row justify-content-md-center">
         <div class="col-auto">
@@ -26,11 +26,15 @@
                 <div class="fs-6">
                     <span class="badge bg-secondary">N° {{ $pokemon->numero }}</span>
                 </div>
-                <img
+                <a href="{{ route('pokemon.card', $pokemon->numero) }}" class="text-decoration-none text-dark">
+                    <img
                     src="{{ $pokemon->getImage(1, $pokemon->numero) }}"
                     alt="{{ $pokemon->name }}"
-                >
-                {{ $pokemon->name }}
+                    >
+                </a>
+                <a href="{{ route('pokemon.card', $pokemon->numero) }}" class="text-decoration-none text-dark">
+                    {{ $pokemon->name }}
+                </a>
                 <div class="ms-3">
                     @foreach ($pokemon->types as $type)
                     <x-type type="{{ $type->name }}" colorT="{{ $type->color_hex_t }}" colorB="{{ $type->color_hex_b }}" />

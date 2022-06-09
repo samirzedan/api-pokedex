@@ -44,13 +44,13 @@ class Pokemon extends Model
     public function getImage(int $i, int $numeroPokemon):string {
         switch ($i) {
             case 1:
-                return SELF::BASE_URL . "$numeroPokemon.png";
+                return SELF::BASE_URL . "other/official-artwork/$numeroPokemon.png";
                 break;
             case 2:
-                return SELF::BASE_URL . "versions/generation-v/black-white/animated/$numeroPokemon.gif";
+                return SELF::BASE_URL . "$numeroPokemon.png";
                 break;
             case 3:
-                return SELF::BASE_URL . "other/official-artwork/$numeroPokemon.png";
+                return SELF::BASE_URL . "versions/generation-vii/icons/$numeroPokemon.png";
                 break;
             default:
                 return null;

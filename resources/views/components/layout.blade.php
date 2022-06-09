@@ -7,18 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pokedex</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <style>
+        body.classe > div{
+            background-color: #000
+        }
+        </style>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<body class="bg-dark bg-gradient classe">
+    <div style="heigth:100vh">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand text-light" href="{{ route('pokemon.index') }}">Home</a>
+            </div>
+        </nav>
         <div class="container">
-            <a class="navbar-brand" href="{{ route('pokemon.index') }}">Home</a>
-        </div>
-    </nav>
-    <div class="container">
-
-        <div class="container" style="mt-3">
-
-            <h1>{{ $title }}</h1>
+            <h1 class="text-light">{{ $title }}</h1>
             {{ $slot }}
         </div>
     </div>
