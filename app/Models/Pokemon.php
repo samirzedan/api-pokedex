@@ -9,6 +9,8 @@ class Pokemon extends Model
 {
     use HasFactory;
 
+    const BASE_URL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
+
     protected $table = 'pokemons';
 
     protected $fillable = [
@@ -42,13 +44,13 @@ class Pokemon extends Model
     public function getImage(int $i, int $numeroPokemon):string {
         switch ($i) {
             case 1:
-                return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/$numeroPokemon.png";
+                return SELF::BASE_URL . "$numeroPokemon.png";
                 break;
             case 2:
-                return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/$numeroPokemon.gif";
+                return SELF::BASE_URL . "versions/generation-v/black-white/animated/$numeroPokemon.gif";
                 break;
             case 3:
-                return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/$numeroPokemon.png";
+                return SELF::BASE_URL . "other/official-artwork/$numeroPokemon.png";
                 break;
             default:
                 return null;
