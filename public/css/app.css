@@ -20548,4 +20548,19 @@ readers do not read off random characters that represent icons */
 .bg-transparent-10 {
     background-color: rgba(255, 255, 255, 0.2);
 }
+.progress-bar-vertical {
+    width: 20px;
+    min-height: 100px;
+    margin-right: 20px;
+    float: left;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */  /* TWEENER - IE 10 */ /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    align-items: flex-end;
+    -webkit-align-items: flex-end; /* Safari 7.0+ */
+  }
+
+  .progress-bar-vertical .progress-bar {
+    width: 100%;
+    height: 0;
+    transition: height 0.6s ease;
+  }
 

@@ -8,10 +8,13 @@
                 class="w-100"
             >
         </div>
-        <div class="col-4">
-            @foreach ($pokemon->types as $type)
-            <x-type type="{{ $type->name }}" colorT="{{ $type->color_hex_t }}" colorB="{{ $type->color_hex_b }}" />
-            @endforeach
+        <div class="col-6 bg-light text-dark rounded p-2">
+            <x-status-pokemon nome="HP" porcentagem="{{ $pokemon->hp }}"/>
+            <x-status-pokemon nome="Attack" porcentagem="{{ $pokemon->attack }}"/>
+            <x-status-pokemon nome="Defense" porcentagem="{{ $pokemon->defense }}"/>
+            <x-status-pokemon nome="Sp. Attack" porcentagem="{{ $pokemon->special_attack }}"/>
+            <x-status-pokemon nome="Sp. Defense" porcentagem="{{ $pokemon->special_defense }}"/>
+            <x-status-pokemon nome="Speed" porcentagem="{{ $pokemon->speed }}"/>
         </div>
     </div>
 </x-layout>
