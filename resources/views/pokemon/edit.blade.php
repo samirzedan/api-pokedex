@@ -65,7 +65,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Salvar</button>
-            <a href="{{ route('pokemon.index') }}" class="btn btn-outline-danger">Cancelar</a>
+            <a href="{{ route('pokemon.index') }}" class="btn btn-outline-secondary">Cancelar</a>
         </form>
     </div>
 </x-layout>

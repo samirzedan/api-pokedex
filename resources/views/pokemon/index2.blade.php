@@ -21,7 +21,7 @@
     <!-- Lista de Pokemons -->
     <div class="row d-flex justify-content-center">
         @foreach ($pokemons as $pokemon)
-        <div class="card col-auto m-2 text-center" style="width: 14rem;">
+        <div class="card col-auto m-2 text-center text-light bg-transparent-10" style="width: 14rem;">
             <img src="{{ $pokemon->getImage(1, $pokemon->numero) }}" class="card-img-top" alt="{{ $pokemon->name }}">
             <div class="card-body">
             <h5 class="card-title">{{ $pokemon->name }}</h5>
