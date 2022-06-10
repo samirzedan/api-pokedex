@@ -28,7 +28,7 @@
                 </div>
                 <a href="{{ route('pokemon.card', $pokemon->numero) }}" class="text-decoration-none text-dark">
                     <img
-                    src="{{ $pokemon->getImage(1, $pokemon->numero) }}"
+                    src="{{ $pokemon->getImage(2, $pokemon->numero) }}"
                     alt="{{ $pokemon->name }}"
                     >
                 </a>
