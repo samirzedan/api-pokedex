@@ -1,6 +1,6 @@
 <x-layout title="Pokedex">
     <!-- Form para Pesquisa -->
-    <!--<form action="" method="GET">
+    {{-- <form action="" method="GET">
         <div class="input-group mb-3">
             <input type="text" name="search" id="search" class="form-control" placeholder="Pokemon Name" aria-label="Pokemon Name" aria-describedby="search">
             <div class="input-group-append">
@@ -9,7 +9,7 @@
                 </button>
             </div>
         </div>
-    </form>-->
+    </form> --}}
     <!-- Botão "Adicionar" -->
     <a href="{{ route('pokemon.create') }}" class="btn btn-primary mt-2 mb-3" title="Adicionar">Adicionar</a>
     <!-- Navegação Entre Páginas -->
